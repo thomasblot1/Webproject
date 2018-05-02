@@ -15,23 +15,35 @@
 
 <h1>Emplois</h1>
 <fieldset>
-<legend>Job1</legend>
-
+<legend>Job 1</legend>
+<h3>Nom:</h3>
+<h3>Type de contract:</h3>
+<h3>Entreprise:</h3>
+<h3>Description:</h3>
 </fieldset>
 
 <fieldset>
-<legend>Job2</legend>
-
+<legend>Job 2</legend>
+<h3>Nom:</h3>
+<h3>Type de contract:</h3>
+<h3>Entreprise:</h3>
+<h3>Description:</h3>
 </fieldset>
 
 <fieldset>
-<legend>Job3</legend>
-
+<legend>Job 3</legend>
+<h3>Nom:</h3>
+<h3>Type de contract:</h3>
+<h3>Entreprise:</h3>
+<h3>Description:</h3>
 </fieldset>
 
 <fieldset>
-<legend>Job4</legend>
-
+<legend>Job 4</legend>
+<h3>Nom:</h3>
+<h3>Type de contract:</h3>
+<h3>Entreprise:</h3>
+<h3>Description:</h3>
 </fieldset>
 
 </html>

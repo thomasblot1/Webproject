@@ -7,6 +7,7 @@
     <li><a href="Reseau.php"> Reseau </a></li>
     <li><a href="Notif.php"> Notif </a></li>
     <li><a href="Emplois.php"> Emplois </a></li>
+    <li><a href="Administrateur.php"> Administrateur </a><li>
     <li><a href="Connexion.php"> Deconnexion </a></li>
   </ul>
 </div>
@@ -15,23 +16,27 @@
 <body>
 <h1>Mon Reseau</h1>
 <fieldset>
-<legend>NomAmi1</legend>
-
+<legend>Ami</legend>
+<h3>Nom</h3>
+<h3>Prenom</h3>
 </fieldset>
 
 <fieldset>
-<legend>NomAmi2</legend>
-
+<legend>Ami</legend>
+<h3>Nom</h3>
+<h3>Prenom</h3>
 </fieldset>
 
 <fieldset>
-<legend>NomAmi3</legend>
-
+<legend>Ami</legend>
+<h3>Nom</h3>
+<h3>Prenom</h3>
 </fieldset>
 
 <fieldset>
-<legend>NomAmi4</legend>
-
+<legend>Ami</legend>
+<h3>Nom</h3>
+<h3>Prenom</h3>
 </fieldset>
 
 </body>

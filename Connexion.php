@@ -16,8 +16,8 @@
 			<section class="container">
 				<input type="checkbox" id="admin" name="Administrateur" value="Administrateur" >
 				<label for="Administrateur">Administrateur</label>
-				<input type="checkbox" id="auteur" name="Auteur" value="Auteur">
-				<label for="Auteur">Auteur</label></div>
+				<input type="checkbox" id="utilisateur" name="Utilisateur" value="Utilisateur">
+				<label for="Utilisateur">Utilisateur</label></div>
 			</section>
 			<section class="container">
 				<section class="row">
@@ -68,13 +68,13 @@ else{
 				}
 			}
 			else{
-				echo"youyounom";}
+				echo"erreur nom";}
 		}
 		else{
-			echo"youyouprenom";}
+			echo"erreur prenom";}
 	}
 	else{
-		echo"youyoumail";
+		echo"erreur mail";
 	}	
 }
 

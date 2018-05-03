@@ -29,7 +29,7 @@
 
 
 <?php
-$reset="UPDATE session SET Connecte='0'"
+$reset="UPDATE session SET Connecte='0'";
 
 
 $Mail = isset($_POST['Mail'])?$_POST['Mail']:"";

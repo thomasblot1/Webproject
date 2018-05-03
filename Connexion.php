@@ -29,7 +29,7 @@
 
 
 <?php
-
+$reset="UPDATE session SET Connecte='0'"
 
 
 $Mail = isset($_POST['Mail'])?$_POST['Mail']:"";
@@ -44,6 +44,7 @@ $con=mysqli_select_db($connectique,$bdd);
 if(!$connectique)
 	echo"pb de connection";
 else{
+	mysqli_query($connectique,$reset);
 	if($Mail!=""){
 		if($Prenom!=""){
 			if($Nom!=""){
@@ -53,6 +54,8 @@ else{
 				
 				while($data=mysqli_fetch_assoc($res)){
 					if(($data['Nom']==$Nom) and ($data['Prenom']==$Prenom) and ($data['Mail']==$Mail)){
+						$ajout="UPDATE session set Connecte ='1' WHERE Nom='".$Nom."'";
+						mysqli_query($connectique,$ajout);
 						header("Location:Accueil.php");
 					}
 					else{

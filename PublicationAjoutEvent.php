@@ -1,9 +1,11 @@
 <html>
+
 <menu>
+<link href="css/PublicationAjoutEvent.css" rel="stylesheet">
 <div id="menu">
   <ul id="onglets">
-    <li class="active"><a href="Accueil.php"> Accueil </a></li>
-	<li><a href="Vous.php"> Vous </a></li>
+    <li><a href="Accueil.php"> Accueil </a></li>
+	<li class="active"><a href="Vous.php"> Vous </a></li>
     <li><a href="Reseau.php"> Reseau </a></li>
     <li><a href="Notif.php"> Notif </a></li>
     <li><a href="Emplois.php"> Emplois </a></li>
@@ -12,6 +14,7 @@
   </ul>
 </div>
 </menu>
+	
 <h1>Ajout d'un événement</h1>
 <fieldset>
 <form>

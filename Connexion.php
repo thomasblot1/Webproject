@@ -63,6 +63,8 @@ else{
 						$res1=mysqli_query($connectique,$sqladmin);
 						while($data1=mysqli_fetch_assoc($res1)){
 							if(($data1['Nom']==$Nom) and ($data1['Prenom']==$Prenom) and ($data1['Mail']==$Mail)){
+								$ajout="UPDATE session set Connecte ='1' WHERE Nom='".$Nom."'";
+								mysqli_query($connectique,$ajout);
 								header("Location:Accueil.php");
 							}
 						}

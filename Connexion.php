@@ -2,26 +2,26 @@
 	<head>
 		<title>Connexion</title>
 		<link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+		<link href="projet.css" rel="stylesheet">
+		
 		<form name="Connexion" method="post" action="Connexion.php">
 		<img src="fond.jpg" alt="fond+logo"></div>
 	</head>
     <body>
         <form method="post" action="Connexion.php">
 			<fieldset>
-			<section class="container">
-				<input type="checkbox" id="admin" name="Administrateur" value="Administrateur" >
-				<label for="Administrateur">Administrateur</label>
-				<input type="checkbox" id="auteur" name="Auteur" value="Auteur">
-				<label for="Auteur">Auteur</label></div>
-			</section>
-			<section class="container">
-				<section class="row">
-					<div class="col-lg-6">Prenom:<input type="text" name="Prenom"/></div>
-					<div class="col-lg-6">Nom:<input type="text" name="Nom"/></div>
-					<div class="col-lg-6">Mail:<input type="text" name="Mail"/></div>
-					<input type="submit" name="Soumettre" value="CONNEXION"/>
-				</section>
-			</section>
+			</br>
+			</br>
+			<label>Prenom:</label>
+			<input type="text" name="Prenom" id=Prenom/>
+			</br>
+			<label>Nom :</label>
+			<input type="text" name="Nom" id=Nom />
+			</br>
+			<label>Mail :</label>
+			<input type="text" name="Mail" id=Mail />
+			</br>
+			<input type="submit" name="Soumettre" id=Connexion value="CONNEXION"/>
 			</fieldset>
         </form>
     </body>
@@ -56,9 +56,16 @@ else{
 						header("Location:Accueil.php");
 					}
 					else{
-						echo"Problèmes";
+						$sqladmin="SELECT Nom,Prenom,Mail FROM table_admin";
+						$res1=mysqli_query($connectique,$sqladmin);
+						while($data1=mysqli_fetch_assoc($res1)){
+							if(($data1['Nom']==$Nom) and ($data1['Prenom']==$Prenom) and ($data1['Mail']==$Mail)){
+								header("Location:Accueil.php");
+							}
+						}
 					}
 				}
+				echo"Problèmes";
 			}
 			else{
 				echo"youyounom";}

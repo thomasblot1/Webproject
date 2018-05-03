@@ -1,0 +1,30 @@
+#onglets{
+	font: bold 15px Batang, arial, sherif;
+	list-style-type : none;
+	padding-bottom : 24px;
+	border-bottom: 1px solid #009999;
+		margin-left : -50px;
+}
+
+#onglets li{
+	float: left;
+	height:21px;
+	/*a varier avec le padding-bottomd au dessus*/
+	background-color : #F4F9FD;
+	
+	margin : 2px 2px 0 2px ;
+	border : 1px solid #9EA0A1;
+}
+#onglet li.active{
+	border-bottom: 3px solid #fff;
+	background-color: #fff;
+}
+#onglet a{
+	display : block;
+	color: #666;
+	text-decoration: none;
+	padding : 4px;
+}
+#onglet a:hover{
+	background:#fff;
+}

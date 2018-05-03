@@ -23,7 +23,7 @@
 	<input type="text" name="prenom">
 	<h3>Mail:</h3>
 	<input type="text" name="mail">
-	<input type="button" value="Vérification">
+	<input type="button" value="Vérification" Onclick="location.href='Administrateur.php'" >
 	<form>
 
 </html>

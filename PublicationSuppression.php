@@ -8,7 +8,7 @@
     <li><a href="Reseau.php"> Reseau </a></li>
     <li><a href="Notif.php"> Notif </a></li>
     <li><a href="Emplois.php"> Emplois </a></li>
-    <li><a href="AdministrateurTest.php"> Gestion des utilisateurs </a><li>
+    <li><a href="AdministrateurTest.php"> Gestion des utilisateurs </a></li>
     <li><a href="Connexion.php"> Deconnexion </a></li>
   </ul>
 </div>
@@ -18,5 +18,5 @@
 //
 //
 //
-<input type="Button" value="Confirmer la suppression">
+<input type="Button" value="Confirmer la suppression" Onclick="location.href='Accueil.php'" >
 </html>

@@ -15,16 +15,16 @@
 	margin : 2px 2px 0 2px ;
 	border : 1px solid #9EA0A1;
 }
-#onglet li.active{
+#onglets li.active{
 	border-bottom: 3px solid #fff;
 	background-color: #fff;
 }
-#onglet a{
+#onglets a{
 	display : block;
 	color: #666;
 	text-decoration: none;
 	padding : 4px;
 }
-#onglet a:hover{
+#onglets a:hover{
 	background:#fff;
 }

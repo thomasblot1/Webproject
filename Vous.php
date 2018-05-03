@@ -31,11 +31,11 @@
 /**Ajout de l'image de fond en prive*/
 
 <h1>Ajout d'une publication</h1>
-<input type="button" value="Multimedia">
-<input type="button" value="Evenement">
+<input type="button" value="Multimedia" Onclick="location.href='PublicationAjoutImageVideo.php'">
+<input type="button" value="Evenement" Onclick="location.href='PublicationAjoutEvent.php'">
 
 <h1>Suppression d'une publication</h1>
-<input type="button" value="Supprimer">
+<input type="button" value="Supprimer" Onclick="location.href='PublicationSuppression.php'">
 </body>
 
 </html>

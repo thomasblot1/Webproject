@@ -14,7 +14,7 @@
 </div>
 </menu>
 <h1>Suppression d'une publication</h1>
-//Affichage de 3 colonnes: photo, video, event
+//Affichage de 2 colonnes: Multimedia, event
 //
 //
 //

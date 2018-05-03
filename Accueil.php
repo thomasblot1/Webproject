@@ -30,15 +30,19 @@ else{
 	$resultate=mysqli_query($connectique,$sq);$compteur=1;
 while($tab=mysqli_fetch_assoc($resultate)){	
 			
-			echo'<fieldset>
-			
-		<legend>Event'.$compteur.'</legend>'.$tab['Date'].'
+			echo'
+		<div class="col-lg-4">	
+		<fieldset class="row">	
+		<legend>'.$tab['Contenu_texte'].$compteur.'</legend>
+		'.$tab['Date'].'
 		</br><img src="'.$tab['chemin'].'" alt="photo" height="500" width="500">
-		<h4>Description</h4>'.$tab['Contenu_texte'].'</br>'.'</br>'.'
-		<input type="button" value="Like">
-		<input type="button" value="Share"></br>
+<h4>Description</h4></br>'.$tab['Description'].'</br>'.'
+		<input type="button" value="Like" name="likeboutton">
+		<input type="button" value="Share name="sharebutton"></br>
 		'.$tab['nb_like'].'
-		</fieldset>';$compteur=$compteur+1;
+		</fieldset>
+		</div>';
+		$compteur=$compteur+1;
 		
 	}	
 }

@@ -2,8 +2,8 @@
 -- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 03 mai 2018 à 12:10
+-- HÃ´te : 127.0.0.1:3306
+-- GÃ©nÃ©rÃ© le :  jeu. 03 mai 2018 Ã  15:52
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `reseausocial`
+-- Base de donnÃ©es :  `reseausocial`
 --
 
 -- --------------------------------------------------------
@@ -35,19 +35,74 @@ CREATE TABLE IF NOT EXISTS `publication` (
   `ID_publication` int(255) NOT NULL AUTO_INCREMENT,
   `nb_like` int(255) NOT NULL,
   `chemin` varchar(255) NOT NULL,
+  `Description` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`ID_publication`),
   UNIQUE KEY `Contenu_texte` (`Contenu_texte`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `publication`
+-- DÃ©chargement des donnÃ©es de la table `publication`
 --
 
-INSERT INTO `publication` (`Contenu_texte`, `Date`, `ID_publication`, `nb_like`, `chemin`) VALUES
-('Pot des Assos', '02/05/2018', 1, 321, 'PhotoPubli/PotAssos.jpg'),
-('Soiree cine : Avenger Infinity war', '05/05/2018', 5, 89, 'PhotoPubli/soiree_cine.jpg'),
-('Journee de la recherche', '17/05/2018', 4, 123, 'PhotoPubli/journee.jpg'),
-('Soiree post partiel', '10/05/2018', 6, 265, 'PhotoPubli/soireePostpartiel.jpg');
+INSERT INTO `publication` (`Contenu_texte`, `Date`, `ID_publication`, `nb_like`, `chemin`, `Description`) VALUES
+('Pot des Assos', '02/05/2018', 1, 321, 'PhotoPubli/PotAssos.jpg', ' viens rencontrer les nouveaux â€œresponsablesâ€ des diffÃ©rentes associations de lâ€™ECE autour de diverses activitÃ©s et tente ainsi de gagner de super lots.\r\nFaire un bon pot est im-pot-rtant, c\'est pour cela que toute vos associations prÃ©fÃ©rÃ©es se sont rÃ©unies pour vous proposer un Ã©vÃ©nement trÃ¨s sympathique et convivia'),
+('Soiree cine : Avenger Infinity war', '05/05/2018', 5, 89, 'PhotoPubli/soiree_cine.jpg', 'Les Avengers et leurs alliÃ©s devront Ãªtre prÃªts Ã  tout sacrifier pour neutraliser le redoutable Thanos avant que son attaque Ã©clair ne conduise Ã  la destruction complÃ¨te de lâ€™univers.'),
+('Journee de la recherche', '17/05/2018', 4, 123, 'PhotoPubli/journee.jpg', 'Les chercheurs du laboratoire de lâ€™ECE Paris sâ€™intÃ©ressent Ã  des travaux de recherche dans les domaines de lâ€™informatique, des nanosciences et des mathÃ©matiques pour lâ€™ingÃ©nierie.\r\n\r\n Nous souhaitons lever le voile sur la Recherche et le Doctorat. Quâ€™est-ce que cela signifie ?  Quâ€™est-ce que le travail dâ€™un chercheur ? Que peut-on faire avec une thÃ¨se ?\r\n\r\nPour rÃ©pondre Ã  ces questions, lâ€™ECE Paris organise sa premiÃ¨re '),
+('Soiree post partiel', '10/05/2018', 6, 265, 'PhotoPubli/soireePostpartiel.jpg', 'Tu as enchainÃ© un projet Java une piscine web ? tu as de foirÃ© la robotique ?\r\nSi tu as prÃ©vu de dÃ©finitivement te niquer le fois en prenant une trÃ¨s grosse caisse viens nous rejoindre le 10/05/2018 '),
+('Sortie de MUTAFUKAZ', '23/05/2018', 7, 42, 'PhotoPubli/MUTAFUKAZ', 'Ã€ la suite dâ€™un accident de scooter provoquÃ© par la vision dâ€™une mystÃ©rieuse inconnue, Angelino, un bon Ã  rien comme il y en a des milliers Ã  Dark Meat City, une sordide mÃ©gapole de la cÃ´te Ouest, commence Ã  avoir de violentes migraines accompagnÃ©es dâ€™Ã©tranges hallucinations. Avec son fidÃ¨le ami Vinz, il tente de dÃ©couvrir ce qui lui arrive, alors que de menaÃ§ants hommes en noir semblent bien dÃ©terminÃ©s Ã  lui mettre la main dessus'),
+('Bataille de polochon GEANTE', '20/05/2018', 8, 1, 'PhotoPubli/polochon', 'Envie de participer Ã  une bataille de polochon gÃ©ante ? Alors direction la Pillow Fight Day 2018 qui aura lieu le dimanche 20 mai 2018. En effet, comme des centaines de personnes, venez rÃ©gresser en groupe et rigoler Ã  pleins poumons. Petit dÃ©fi pour cette nouvelle Ã©dition, monter des Ã©quipes dÃ©guisÃ©es par thÃ¨me: animaux, super-hÃ©ros, accessoires dÃ©jantÃ©es, t-shirt drÃ´les,... laissez libre court Ã  votre imagination!\r\n'),
+('Webinar No limit to the Cloud', '29/05/2018', 9, 203, 'PhotoPubli/webinar', 'Cloud Infrastructure France est issu du rapprochement des Ã©quipes infrastructure de Capgemini et Sogeti.\r\nNous cumulons ainsi plus de 50 ans d\'expÃ©rience dans l\'IT. Notre appartenance au groupe Capgemini est un atout unique, qui multiplie les possibilitÃ©s d\'Ã©volution, de mobilitÃ© et de participation Ã  des projets d\'envergure mondiale.\r\nRendez-vous le mardi 29 mai Ã  17h30 pour un Ã©change dâ€™une heure. Vous pourrez poser vos questions dÃ¨s 10h le matin du live !'),
+('visite de la RUCHE', '27/05/2018', 10, 158, 'PhotoProfil/ruche', 'Venez decouvrir un espace de coworking collaboratif dedie a l\'innovation dans le cadre des avancees social et ecologiques'),
+('Atos t\'ouvre les portes de son Codir !', '15/05/2018', 11, 92, 'PhotoPubli/atos', 'Atos tâ€™invite Ã  exposer ta vision du manager de demain en vidÃ©o !\r\n\r\nLe/la gagnant.e aura lâ€™opportunitÃ© de passer une semaine en immersion totale chez Atos, aux cÃ´tÃ©s des membres du Codir France.'),
+('Bpifrance Financement recrute !', '17/05/2018', 12, 100, 'PhotoPubli/bpi', 'Les Ã©quipes IDF de Bpifrance Financement recrutent ! \r\nRejoignez la Team Bpifrance en tant que ChargÃ© d\'Etude Innovation, Financement Court Terme ou Analyste CrÃ©dit ! \r\nOpportunitÃ©s en stage de prÃ©-embauche ou en CDI, alors â€¦ RDV sur notre page et Ã  vos CV !'),
+('VidÃ©o Live: Quâ€™est-ce que le mÃ©tier de consultant ? Pramana vous rÃ©pond !', '21/05/2018', 13, 444, 'PhotoPubli/pranama', 'Nous vivons dans un monde diffÃ©rent, un monde nouveau, un monde digital. Plus que jamais, le numÃ©rique questionne et se positionne au centre des enjeux et des prÃ©occupations des entreprises. Dans ce contexte en mutation rapide, Pramana apporte un conseil Ã©clairÃ© et expert aux entreprises pour les guider sur les nouvelles technologies.\r\nRendez-vous le lundi 21 mai Ã  17h30 pour un Ã©change dâ€™une heure. Vous pourrez poser vos questions dÃ¨s 10h le matin du chat.');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `session`
+--
+
+DROP TABLE IF EXISTS `session`;
+CREATE TABLE IF NOT EXISTS `session` (
+  `ID_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `Mail` varchar(255) NOT NULL,
+  `Prenom` varchar(255) NOT NULL,
+  `Nom` varchar(255) NOT NULL,
+  `Connecte` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`ID_utilisateur`)
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+
+--
+-- DÃ©chargement des donnÃ©es de la table `session`
+--
+
+INSERT INTO `session` (`ID_utilisateur`, `Mail`, `Prenom`, `Nom`, `Connecte`) VALUES
+(2, 'cyprien.uj@gmail', 'cyprien', 'uhart-jouet', NULL),
+(3, 'segado@id.campuseiffel.fr', 'jean-pierre', 'segado', NULL),
+(4, 'thomas.blot@edu.ece.fr', 'thomas', 'blot', NULL),
+(5, 'sarah.bragas@edu.ece.fr', 'sarah', 'bragas', NULL),
+(6, 'loki.odinson@edu.ece.fr', 'loki', 'odinson', NULL),
+(7, 'heimdall.bifrost@edu.ece.fr', 'heimdall', 'bifrost', NULL),
+(8, 'peter.parker@edu.ece.fr', 'peter', 'parker', NULL),
+(9, 'steven.strange@edu.ece.fr', 'steven', 'strange', NULL),
+(10, 'thor.odinson@edu.ece.fr', 'thor', 'odinson', NULL),
+(11, 'luke.skywalker@edu.ece.fr', 'luke', 'skywalker', NULL),
+(12, 'atila.lehun@edu.ece.fr', 'atila', 'lehun', NULL),
+(13, 'honor.harrington@edu.ece.fr', 'honor', 'harrington', NULL),
+(14, 'tyler.durden@edu.ece.fr', 'tyler', 'durden', NULL),
+(15, 'jack.daniels@edu.ece.fr', 'jack', 'daniels', NULL),
+(16, 'seth.radiant@edu.ece.fr', 'seth', 'radiant', NULL),
+(17, 'richard.aldana@edu.ece.fr', 'richard', 'aldana', NULL),
+(18, 'longjohn.silver@edu.ece', 'longjohn', 'silver', NULL),
+(19, 'capitaine.flint@edu.ece.fr', 'capitaine', 'flint', NULL),
+(20, 'han.solo@edu.ece.fr', 'han', 'solo', NULL),
+(21, 'adrian.velba@edu.ece.fr', 'adrian', 'velba', NULL),
+(22, 'sand.glotka@edu.ece.fr', 'sand', 'glotka', NULL),
+(23, 'monza.murcato@edu.ece.fr', 'monza', 'murcato', NULL),
+(24, 'tony.stark@edu.ece.fr', 'tony', 'stark', NULL),
+(25, 'koro.sensei@edu.ece.fr', 'koro', 'sensei', NULL),
+(26, 'ororo.monroe@edu.ece.fr', 'ororo', 'monroe', NULL);
 
 -- --------------------------------------------------------
 
@@ -67,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `table_admin` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `table_admin`
+-- DÃ©chargement des donnÃ©es de la table `table_admin`
 --
 
 INSERT INTO `table_admin` (`ID_admin`, `Mail`, `Nom`, `Prenom`, `Photo`, `Photo_fond`) VALUES
@@ -92,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `table_job` (
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `table_job`
+-- DÃ©chargement des donnÃ©es de la table `table_job`
 --
 
 INSERT INTO `table_job` (`ID_job`, `Nom_job`, `Entreprise`, `Descriptif`, `type_de_contrat`) VALUES
@@ -114,11 +169,40 @@ DROP TABLE IF EXISTS `table_reseau`;
 CREATE TABLE IF NOT EXISTS `table_reseau` (
   `ID_ami` int(255) NOT NULL AUTO_INCREMENT,
   `Mail_ami` varchar(255) NOT NULL,
-  `Prenom_ami` int(255) NOT NULL,
-  `Nom_ami` int(255) NOT NULL,
-  `Photo_ami` longblob NOT NULL,
+  `Prenom_ami` varchar(255) NOT NULL,
+  `Nom_ami` varchar(255) NOT NULL,
+  `Photo_ami` varchar(255) NOT NULL,
   PRIMARY KEY (`ID_ami`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+
+--
+-- DÃ©chargement des donnÃ©es de la table `table_reseau`
+--
+
+INSERT INTO `table_reseau` (`ID_ami`, `Mail_ami`, `Prenom_ami`, `Nom_ami`, `Photo_ami`) VALUES
+(1, 'thomas.blot@edu.ece.fr', 'thomas', 'blot', 'PhotoProfil/thomas_blot.jpg'),
+(2, 'sarah.bragas@edu.ece.fr', 'sarah', 'bragas', 'PhotoProfil/sarah_bragas.jpg'),
+(4, 'heimdall.bifrost@edu.ece.fr', 'heimdall', 'bifrost', 'PhotoProfil/heimdall_bifrost.jpg'),
+(5, 'peter.parker@edu.ece.fr', 'peter', 'parker', 'PhotoProfil/peter_parker.jpg'),
+(6, 'steven.strange@edu.ece.fr', 'steven', 'strange', 'PhotoProfil/steven_strange.jpg'),
+(7, 'thor.odinson@edu.ece.fr', 'thor', 'odison', 'PhotoProfil/thor_odinson.jpg'),
+(8, 'luke.skywalker@edu.ece.fr', 'luke', 'skywalker', 'PhotoProfil/luke_skywalker.jpg'),
+(9, 'atila.lehun@edu.ece', 'atila', 'lehun', 'PhotoProfil/atila_lehun.jpg'),
+(10, 'honor.harrington@edu.ece.fr', 'honor', 'harrington', 'PhotoProfil/honor_harrington.jpg'),
+(11, 'tyler.durden@edu.ece.fr', 'tyler', 'durden', 'PhotoProfil/tyler_durden.jpg'),
+(12, 'jack.daniels@edu.ece.fr', 'jack', 'daniels', 'PhotoProfil/jack_daniels.jpg'),
+(13, 'seth.radiant@edu.ece.fr', 'seth', 'radiant', 'PhotoProfil/seth_radiant.jpg'),
+(14, 'richar.aldana@edu.ece.fr', 'richard', 'aldana', 'PhotoProfil/richard_aldana.jpg'),
+(15, 'longjohn.silver@edu.ece.fr', 'longjohn', 'silver', 'PhotoProfil/longjohn_silver.jpg'),
+(16, 'capitane.flint@edu.ece.fr', 'capitaine', 'flint', 'PhotoProfil/capitaie_flint.jpg'),
+(17, 'han.solo@edu.ece.fr', 'han', 'solo', 'PhotoProfil/han_solo.jpg'),
+(18, 'adrian.velba@edu.ece.fr', 'adrian', 'velba', 'PhotoProfil/adrian_velba.jpg'),
+(19, 'sand.glotka@edu.ece.fr', 'sand', 'glotka', 'PhotoProfil/sand_glotka.jpg'),
+(20, 'monza.murcato@edu.ece.fr', 'monza', 'murcato', 'PhotoProfil/monza_murcato.jpg'),
+(21, 'tony.stark@edu.ece.fr', 'tony', 'stark', 'PhotoProfil/tony_stark.jpg'),
+(22, 'koro.sensei@edu.ece.fr', 'koro', 'sensei', 'PhotoProfil/koro_sensei.jpg'),
+(23, 'ororo.munroe@edu.ece.fr', 'ororo', 'munroe', 'PhotoProfil/ororo_munroe.jpg'),
+(24, 'loki.odinson@edu.ece.fr', 'loki', 'odinson', 'PhotoProfil/loki_odinson.jpg');
 
 -- --------------------------------------------------------
 
@@ -138,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `table_utilisateurs` (
 ) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 
 --
--- Déchargement des données de la table `table_utilisateurs`
+-- DÃ©chargement des donnÃ©es de la table `table_utilisateurs`
 --
 
 INSERT INTO `table_utilisateurs` (`ID_utilisateur`, `Mail`, `Nom`, `Prenom`, `Photo`, `Photo_de_fond`) VALUES
@@ -170,3 +254,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

@@ -31,7 +31,7 @@
 /**Ajout de l'image de fond en prive*/
 
 <h1>Ajout d'une publication</h1>
-<input type="button" value="Multimédia">
+<input type="button" value="Multimedia">
 <input type="button" value="Evenement">
 
 <h1>Suppression d'une publication</h1>

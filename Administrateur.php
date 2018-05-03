@@ -14,6 +14,6 @@
 </div>
 </menu>
 <h1>Administrateur - Gestion des utilisateurs</h1>
-<input type="Button" value="Ajout d'un utilisateur">
-<input type="Button" value="Suppression d'un utilisateur">
+<input type="Button" value="Ajout d'un utilisateur" Onclick="location.href='AdministrateurAjout.php'">
+<input type="Button" value="Suppression d'un utilisateur" Onclick="location.href='AdministrateurSuppression.php'">
 </html>

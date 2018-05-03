@@ -68,10 +68,10 @@ else{
 				echo"Problèmes";
 			}
 			else{
-				echo"youyounom";}
+				echo"erreur nom";}
 		}
 		else{
-			echo"youyouprenom";}
+			echo"erreur prenom";}
 	}
 	else{
 	}	

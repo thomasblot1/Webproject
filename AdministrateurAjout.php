@@ -21,6 +21,6 @@
 		<input type="text" name="prenom">
 		<h3>Mail</h3>
 		<input type="text" name="mail">
-		<input type="button" value="Valider l'ajout">
+		<input type="button" value="Valider l'ajout" Onclick="location.href='Administrateur.php'">
 	</form>
 </html>

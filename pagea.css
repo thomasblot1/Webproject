@@ -1,0 +1,41 @@
+
+body{
+	background-image:url("fondaccueil.jpg");
+	text-align:center;
+}
+.row {
+  margin-right: 10px;
+  margin-left: 10px;
+  max-height:1500px;
+  margin-bottom:50px;
+}#onglets{
+	font: bold 15px Batang, arial, sherif;
+	list-style-type : none;
+	padding-bottom : 24px;
+	border-bottom: 1px solid #009999;
+		margin-left : -50px;
+}
+
+
+#onglets li{
+	float: left;
+	height:21px;
+	/*a varier avec le padding-bottomd au dessus*/
+	background-color : #F4F9FD;
+	margin : 2px 2px 0 2px ;
+	/*margin: 1px 2px 0 2px à ajouter si navigateurs!= IE*/
+	border : 1px solid #9EA0A1;
+}
+#onglets li.active{
+	border-bottom: 3px solid #fff;
+	background-color: #fff;
+}
+#onglets a{
+	display : block;
+	color: #666;
+	text-decoration: none;
+	padding : 4px;
+}
+#onglets a:hover{
+	background:#fff;
+}

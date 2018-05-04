@@ -1,0 +1,17 @@
+.co{
+	color:white;
+}
+.center{
+	text-align:center;
+	padding:30px;
+	margin-left:100px;
+	margin-right:100px;
+}
+.boutton{
+	
+	color:noir;
+}
+body{
+	background-image:url("fondConnexion.jpg");
+	
+}

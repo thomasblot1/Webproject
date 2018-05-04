@@ -33,11 +33,11 @@ while($tab=mysqli_fetch_assoc($resultate)){
 			echo'
 		<div class="col-lg-4">	
 		<fieldset class="row">	
-		<legend>'.$tab['Contenu_texte'].$compteur.'</legend>
+		<legend>'.$tab['Contenu_texte'].'</legend>
 		'.$tab['Date'].'
 		</br><img src="'.$tab['chemin'].'" alt="photo" height="500" width="500">
 <h4>Description</h4></br>'.$tab['Description'].'</br>'.'
-		<input type="button" value="Like" name="likeboutton">
+		<input type="button" value="Like" name="likeboutton" >
 		<input type="button" value="Share name="sharebutton"></br>
 		'.$tab['nb_like'].'
 		</fieldset>

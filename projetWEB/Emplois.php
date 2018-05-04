@@ -13,38 +13,40 @@
   </ul>
 </div>
 </menu>
-
-<h1>Emplois</h1>
-<fieldset>
-<legend>Job 1</legend>
-<h3>Nom:</h3>
-<h3>Type de contract:</h3>
-<h3>Entreprise:</h3>
-<h3>Description:</h3>
-</fieldset>
-
-<fieldset>
-<legend>Job 2</legend>
-<h3>Nom:</h3>
-<h3>Type de contract:</h3>
-<h3>Entreprise:</h3>
-<h3>Description:</h3>
-</fieldset>
-
-<fieldset>
-<legend>Job 3</legend>
-<h3>Nom:</h3>
-<h3>Type de contract:</h3>
-<h3>Entreprise:</h3>
-<h3>Description:</h3>
-</fieldset>
-
-<fieldset>
-<legend>Job 4</legend>
-<h3>Nom:</h3>
-<h3>Type de contract:</h3>
-<h3>Entreprise:</h3>
-<h3>Description:</h3>
-</fieldset>
-
+	
+<body>
+<?php
+echo'<h1>Emplois</h1>';
+$serveur="localhost";
+$log="root";
+$compteur=1;
+$mdp="";
+$bdd="reseausocial";
+$connectique=mysqli_connect($serveur,$log,$mdp);
+$con=mysqli_select_db($connectique,$bdd);
+if(!$connectique)
+	echo"pb de connection";
+else{
+	$sq="SELECT * FROM table_job";
+	$resultate=mysqli_query($connectique,$sq);$compteur=1;
+while($tab=mysqli_fetch_assoc($resultate)){	
+			
+			echo'
+			<fieldset style= "width:400px;padding:20px;margin:0;">
+			
+		<legend>Job '.$compteur.' : </legend>'.
+		'Nom:'.$tab['Nom_job'].'
+		</br>Type de contact:'.$tab['type_de_contrat'].
+		"</br>Proposé par l'entreprise :".$tab['Entreprise'].'</br>'.
+		'Description:'.$tab['Descriptif'].'  
+		</fieldset>';$compteur=$compteur+1;
+		
+	}	
+}
+?>
+<h3>Gérer les demandes d'emploi: </h3>
+<input type="button" value="Ajouter un job" Onclick="location.href='JobAjout.php'">
+<input type="button" value="Supprimer un job" Onclick="location.href='JobSuppression.php'">
+</body>	
+	
 </html>

@@ -5,6 +5,13 @@
 	border-bottom: 1px solid #009999;
 		margin-left : -50px;
 }
+.cadre{
+	width:400px;
+	padding:20px;
+	
+	margin-left:450px;
+	margin-right:450px;
+}
 body{
 	background-image:url("Fond.jpeg");
 	text-align:center;

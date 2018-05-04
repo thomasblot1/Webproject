@@ -5,6 +5,13 @@
 	border-bottom: 1px solid #009999;
 		margin-left : -50px;
 }
+body{
+	background-image:url("Fond.jpeg");
+	text-align:center;
+	margin-left:100px;
+	margin-right:100px;
+}
+
 
 #onglets li{
 	float: left;

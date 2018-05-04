@@ -28,3 +28,9 @@
 #onglets a:hover{
 	background:#fff;
 }
+body{
+	background-image:url("Fond.jpeg");
+	text-align:center;
+	margin-left:100px;
+	margin-right:100px;
+}
